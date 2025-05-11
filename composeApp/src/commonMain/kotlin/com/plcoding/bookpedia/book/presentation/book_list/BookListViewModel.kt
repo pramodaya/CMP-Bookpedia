@@ -18,12 +18,10 @@ class BookListViewModel : ViewModel(){
                     it.copy( searchQuery = action.query)
                 }
             }
-            is BookListAction.onBookClick -> {
-                _state.update {
-                    it.copy(selectedBook = action.book)
-                }
+            is BookListAction.OnBookClick -> {
+
             }
-            is BookListAction.onTabSelected -> {
+            is BookListAction.OnTabSelected -> {
                 _state.update {
                     it.copy( selectedTabIndex = action.index)
                 }
